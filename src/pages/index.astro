@@ -1,0 +1,79 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Badge from "../components/Badge.astro";
+import Linkedin from "../icons/Linkedin.astro";
+import SocialPill from "../icons/SocialPill.astro";
+import Github from "../icons/Github.astro";
+import Mail from "../icons/Mail.astro";
+import Experience from "../components/experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Briefcase from "../icons/Briefcase.astro";
+import School from "../icons/School.astro";
+import { Code } from "astro:components";
+import CodeIcon from "../icons/CodeIcon.astro";
+import Projects from "../components/Projects.astro";
+---
+
+<Layout title="Portfolio de Alex D. - Desarrollador y Programador">
+  <main class="px-4">
+    <SectionContainer class="py-44 pb-32">
+      <img
+        class="rounded-full w-32 h-32 mb-4"
+        src="aliporipicture.jpeg"
+        alt="alipori picture"
+      />
+      <h1
+        class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 lg:pb-10 pb-6"
+      >
+        Hola!, Soy Alex :D <div class="flex justify-center items-center">
+          <Badge>Disponible para trabajar</Badge>
+        </div>
+      </h1>
+      <h2 class="text-xl lg:text-2xl opacity-90 text-wrap max-w-[700px]">
+        <span>
+          <span class="text-blue-400 font-bold">
+            Ingeniero en Sistemas Computacionales</span
+          > y <span class="text-blue-400 font-bold">Desarrollador Web</span> con
+          pasión por la tecnología y la innovación. Me gusta servir y hacer un mundo
+          mejor.
+        </span>
+      </h2>
+      <nav class="flex gap-x-2 mt-8 flex-wrap">
+        <SocialPill href="">
+          <Linkedin class="size-4 md:size-6" /> LinkedIn
+        </SocialPill>
+        <SocialPill href="">
+          <Github class="size-4 md:size-6" /> Github
+        </SocialPill>
+        <SocialPill href="">
+          <Mail class="size-4 md:size-6" /> alipori.bot@gmail.com
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+    <SectionContainer id="experiencia">
+      <h2 class="text-3xl font-semibold mb-7 flex gap-x-3 items-center">
+        <Briefcase class="size-10" />
+        Trayectoria Profesional y Académica
+      </h2>
+      <Experience />
+    </SectionContainer>
+    <SectionContainer id="proyectos">
+      <h2 class="text-3xl font-semibold mb-7 flex gap-x-3 items-center">
+        <CodeIcon class="size-10" />
+        Proyectos
+      </h2>
+      <h1 class="text-white/90 mb-10">
+        Despues de terminar la universidad, me dedique a poner mi granito de
+        arena en el trabajo familiar, desde darle una nueva identidad a el lugar
+        donde trabajo, lo que significa nuevo logo, una nueva identidad visual,
+        mejoras en el sistema de organizacion, y metodologias agiles para una
+        mejor experiencia para el cliente y los trabajadores, esto hizo mas
+        facil el trabajo, lo que resulto en mejoras en eficiencia y eficacia en
+        las areas de trabajo, por lo que mejoramos sustancialmente en los
+        ingresos generados.
+      </h1>
+      <Projects id="" />
+    </SectionContainer>
+  </main>
+</Layout>

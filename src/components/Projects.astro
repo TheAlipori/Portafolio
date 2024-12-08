@@ -1,0 +1,88 @@
+---
+import CsharpIcon from "../icons/CsharpIcon.astro";
+import FlutterIcon from "../icons/FlutterIcon.astro";
+import JavaScriptIcon from "../icons/JavaScriptIcon.astro";
+import ReactIcon from "../icons/ReactIcon.astro";
+import SQLIcon from "../icons/SQLIcon.astro";
+import TailwindCSS from "../icons/TailwindCSS.astro";
+
+const TAGS = {
+  REACT: {
+    name: "React",
+    class: "bg-black text-white",
+    icon: ReactIcon,
+  },
+  TAILWIND: {
+    name: "TailwindCSS",
+    class: "bg-black text-white",
+    icon: TailwindCSS,
+  },
+  CSHARP: {
+    name: "C#",
+    class: "bg-black text-white",
+    icon: CsharpIcon,
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "bg-black text-white",
+    icon: JavaScriptIcon,
+  },
+  SQL: {
+    name: "SQL Server",
+    class: "bg-black text-white",
+    icon: SQLIcon,
+  },
+  FLUTTER: {
+    name: "Flutter",
+    class: "bg-black text-white",
+    icon: FlutterIcon,
+  },
+};
+const PROJECTS = [
+  {
+    title: "Copymax POS",
+    description:
+      "Es un sistema de punto de venta desarrollado en .NET Framework. Este sistema permite gestionar precios, encargos y facturación de manera eficiente. Incluye funcionalidades para el manejo de inventario, seguimiento de pedidos y generación de reportes de ventas. Además, integra características para la administración de clientes y proveedores, facilitando la operación diaria del negocio. Utiliza SQL Server para la gestión de la base de datos, asegurando la integridad y seguridad de la información.",
+    link: "",
+    Github: "#",
+    image: "copyApp.png",
+    tags: [TAGS.SQL, TAGS.CSHARP],
+  },
+  {
+    title: "Pagina principal de Copymax",
+    description:
+      "Desarrolle una pagina para Copymax utilizando tecnologías modernas. La página incluye una interfaz intuitiva y responsiva, un sistema de pedidos en línea, información de contacto y un blog para actualizaciones. La implementación de SEO optimizado ha mejorado la visibilidad de Copymax en los motores de búsqueda.",
+    link: "",
+    Github: "#",
+    image: "landingpage_copymax.png",
+    tags: [TAGS.TAILWIND, TAGS.REACT],
+  },
+];
+---
+
+{
+  PROJECTS.map(({ title, description, tags, image }) => (
+    <article class="opacity-90 mb-6">
+      <h3 class="text-2xl font-semibold text-blue-400 mb-2">{title}</h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <ul class="flex gap-x-2 flex-row mb-3">
+        {tags.map((tag) => (
+          <li>
+            <span
+              class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-3  items-center`}
+            >
+              <tag.icon class="size-6" />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+
+      <img
+        class="rounded-xl shadow-2xl shadow-white/10"
+        src={image}
+        alt={`Captura de pantalla del proyecto ${image}`}
+      />
+    </article>
+  ))
+}
