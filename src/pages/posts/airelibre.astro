@@ -1,0 +1,126 @@
+---
+interface Props {
+  title: string;
+}
+import Footer from "../../components/Footer.astro";
+import Header from "../../components/Header.astro";
+import "@fontsource-variable/onest";
+import "@fontsource-variable/quicksand";
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Portafolio de Alex Dominguez" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Copymax</title>
+  </head>
+  <body
+    class="absolute top-0 z-[-2] min-h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))] bg-no-repeat bg-cover"
+  >
+    <Header />
+    <!-- Contenedor Principal -->
+    <div class="max-w-4xl mx-auto p-6 mt-10">
+      <!-- Título del Post -->
+      <h1 class="text-4xl font-bold text-white mb-6 text-center">
+        <span class="text-white quicksand">Aire Libre</span>
+      </h1>
+
+      <!-- Imagen Principal -->
+      <div class="mb-6 rounded-xl">
+        <img
+          src="/airelibre.png"
+          alt="Imagen de Copymax"
+          class="w-full h-auto"
+        />
+      </div>
+
+      <!-- Primer Párrafo -->
+      <h1 class="text-2xl text-center mb-6 font-bold">Un rebranding</h1>
+      <p class="text-lg leading-relaxed mb-4">
+        Aire Libre" es un concepto que nace de la idea de disfrutar un café
+        artesanal en un entorno natural, donde la paz y la tranquilidad se
+        combinan con la esencia del buen café. Este proyecto de diseño tiene
+        como objetivo crear una experiencia visual que refleje no solo la
+        calidad de los productos, sino también la conexión con el aire libre y
+        la naturaleza. El diseño de la página busca transmitir esa atmósfera
+        relajada y acogedora, con una paleta de colores suaves y una tipografía
+        cálida que invite a los visitantes a descubrir más sobre este refugio
+        único. Con una interfaz fácil de navegar y adaptada para ofrecer
+        información clara y accesible, "Aire Libre" es un espacio donde cada
+        visita es una experiencia única.
+      </p>
+
+      <!-- Imagen Adicional -->
+      <div class="mb-6">
+        <img
+          src="/airelibrerebranding.png"
+          alt="Equipo de trabajo en Copymax"
+          class="w-full h-auto"
+        />
+      </div>
+
+      <!-- Segundo Párrafo -->
+      <p class="text-lg leading-relaxed mb-4">
+        El objetivo que queria lograr con el rebranding de Copymax era un
+        ecosistema facil de identificar para los clientes, y que todo, la
+        publicidad, la pagina web y otros elementos giraran entorno a el mismo
+        concepto.
+      </p>
+      <h1 class="text-2xl text-center mb-6">Pagina web</h1>
+      <!-- Otra Imagen -->
+      <div class="mb-6">
+        <img
+          src="/landingpagecafelibre.jpeg"
+          alt="Clientes satisfechos"
+          class="w-full h-auto"
+        />
+      </div>
+      <h1 class="text-2xl text-center mb-6 font-bold">Material promocional</h1>
+      <p class="text-lg leading-relaxed mb-4">
+        Tambien me dedique en la creacion de todo el material creativo, como
+        hacer las etiquetas del cafe soluble que venden, asi como los empaques
+        de los productos.
+      </p>
+      <div class="mb-6">
+        <img
+          src="/cafemoka.png"
+          alt="Clientes satisfechos"
+          class="w-full h-auto"
+        />
+      </div>
+      <!-- Conclusión -->
+    </div>
+    <Footer />
+  </body>
+
+  <style is:global>
+    :root {
+      color-scheme: ligth dark;
+    }
+    html {
+      font-family:
+        "Onest Variable",
+        "Quicksand Variable" sans-serif;
+      height: 100%;
+    }
+    body {
+      background-color: #050505;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+</html>

@@ -40,28 +40,28 @@ const TAGS = {
 };
 const PROJECTS = [
   {
-    title: "Copymax POS",
+    title: "Aire Libre",
     description:
-      "Es un sistema de punto de venta desarrollado en .NET Framework. Este sistema permite gestionar precios, encargos y facturación de manera eficiente. Incluye funcionalidades para el manejo de inventario, seguimiento de pedidos y generación de reportes de ventas. Además, integra características para la administración de clientes y proveedores, facilitando la operación diaria del negocio. Utiliza SQL Server para la gestión de la base de datos, asegurando la integridad y seguridad de la información.",
-    link: "",
+      "Aire Libre fue el primer proyecto como freelancer, crear una marca desde un inicio asi como su pagina web fue muy divertido, pues pude experimentar con diferentes tecnologias y herramientas para lograr un resultado satisfactorio para el cliente.",
+    link: "/posts/airelibre",
     Github: "#",
-    image: "copyApp.png",
-    tags: [TAGS.SQL, TAGS.CSHARP],
+    image: "airelibre.png",
+    tags: [TAGS.TAILWIND, TAGS.REACT],
   },
   {
-    title: "Pagina principal de Copymax",
+    title: "Copymax",
     description:
-      "Desarrolle una pagina para Copymax utilizando tecnologías modernas. La página incluye una interfaz intuitiva y responsiva, un sistema de pedidos en línea, información de contacto y un blog para actualizaciones. La implementación de SEO optimizado ha mejorado la visibilidad de Copymax en los motores de búsqueda.",
-    link: "",
+      "Como primer trabajo despues de terminar la carrera, me dedique a hacer un rebranding a el lugar donde trabajo, pues requeria un nuevo logo y una nueva imagen para la empresa, asi como una pagina web para mostrar los servicios que ofrecemos.",
+    link: "/posts/copymax",
     Github: "#",
-    image: "landingpage_copymax.png",
+    image: "coypmaxwallpaper.png",
     tags: [TAGS.TAILWIND, TAGS.REACT],
   },
 ];
 ---
 
 {
-  PROJECTS.map(({ title, description, tags, image }) => (
+  PROJECTS.map(({ title, description, tags, image, link }) => (
     <article class="opacity-90 mb-6">
       <h3 class="text-2xl font-semibold text-blue-400 mb-2">{title}</h3>
       <p class="text-lg mb-4 text-pretty">{description}</p>
@@ -79,10 +79,18 @@ const PROJECTS = [
       </ul>
 
       <img
-        class="rounded-xl shadow-2xl shadow-white/10"
+        class="rounded-xl shadow-2xl shadow-white/10 mb-6"
         src={image}
         alt={`Captura de pantalla del proyecto ${image}`}
       />
+      <div class="flex justify-center">
+        <a
+          href={link}
+          class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+        >
+          Ver proyecto
+        </a>
+      </div>
     </article>
   ))
 }

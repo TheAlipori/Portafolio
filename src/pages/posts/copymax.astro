@@ -1,0 +1,162 @@
+---
+interface Props {
+  title: string;
+}
+import Footer from "../../components/Footer.astro";
+import Header from "../../components/Header.astro";
+import "@fontsource-variable/onest";
+import "@fontsource-variable/quicksand";
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Portafolio de Alex Dominguez" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Copymax</title>
+  </head>
+  <body
+    class="absolute top-0 z-[-2] min-h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))] bg-no-repeat bg-cover"
+  >
+    <Header />
+    <!-- Contenedor Principal -->
+    <div class="max-w-4xl mx-auto p-6 mt-10">
+      <!-- Título del Post -->
+      <h1 class="text-4xl font-bold text-white mb-6 text-center">
+        <span class="text-white quicksand">Copymax</span>
+      </h1>
+
+      <!-- Imagen Principal -->
+      <div class="mb-6 rounded-xl">
+        <img
+          src="/coypmaxwallpaper.png"
+          alt="Imagen de Copymax"
+          class="w-full h-auto"
+        />
+      </div>
+
+      <!-- Primer Párrafo -->
+      <h1 class="text-2xl text-center mb-6 font-bold">Mi comienzo</h1>
+      <p class="text-lg leading-relaxed mb-4">
+        Copymax fue el primer negocio donde pude aplicar mis conocimientos
+        adquiridos en la universidad, un proyecto que nació como agradecimiento
+        pues fue el lugar donde pude costearme mis estudios, mientras trabajaba
+        en Copymax me di cuenta de las necesidades de los clientes y a su vez,
+        del propio negocio, como una metodologia agil y un nuevo paradigma de
+        trabajo, asi que al finalizar mis estudios, decidi dedicarle tiempo a
+        mejorar las coass que creia que podian ser mejoradas.
+      </p>
+
+      <!-- Imagen Adicional -->
+      <div class="mb-6">
+        <img
+          src="/copymaxrebranding.png"
+          alt="Equipo de trabajo en Copymax"
+          class="w-full h-auto"
+        />
+      </div>
+
+      <!-- Segundo Párrafo -->
+      <p class="text-lg leading-relaxed mb-4">
+        El objetivo que queria lograr con el rebranding de Copymax era un
+        ecosistema facil de identificar para los clientes, y que todo, la
+        publicidad, la pagina web y otros elementos giraran entorno a el mismo
+        concepto.
+      </p>
+      <h1 class="text-2xl text-center mb-6">Sistema POS</h1>
+      <!-- Otra Imagen -->
+      <div class="mb-6">
+        <img
+          src="/CopyApp.png"
+          alt="Clientes satisfechos"
+          class="w-full h-auto"
+        />
+      </div>
+
+      <!-- Conclusión -->
+      <p class="text-lg leading-relaxed">
+        El lugar donde trabaja no contaba con un sistema POS, asi que decidi
+        crearlo utilizando lo aprendido en la universidad, un sistema hecho en
+        c# utilizando el framework .NET y como base de datos SQL server, fue
+        divertido hacerlo y me di cuenta de lo importante que es tener un
+        sistema de este tipo en el negocio (¡Adios a escribir notas de recibo a
+        mano!)
+      </p>
+      <h1 class="text-2xl text-center mb-6 mt-6">Mis incios en React</h1>
+      <p class="text-lg leading-relaxed">
+        ¿Quien no aprendio React haciendo un To-do? aunque yo lo hice mas
+        adaptable a mi negocio, si de casualidad tienes un centro de copiado,
+        ¡seguro que te sirve!, si quieres probarlo, aqui esta: <a
+          href="https://copy-pendientes.vercel.app/"
+          class="text-blue-500 hover:underline"
+        >
+          Haz clic aquí para ir a Copy Pendientes
+        </a>
+      </p>
+      <div class="mb-6">
+        <img
+          src="/todo-app.png"
+          alt="Clientes satisfechos"
+          class="w-1/2 h-auto mx-auto mt-6"
+        />
+      </div>
+
+      <h1 class="text-2xl text-center mb-6">Pagina web</h1>
+      <p class="text-lg leading-relaxed">
+        Y al final, termine la pagina web, ¡como primera pagina me gusto como
+        quedo!, aprendi mucho de SEO y de como hacer una pagina web mas
+        responsiva, me encanto trabajar con Astro y Tailwindcss, y aunque ya se
+        me acabo el dominio, puedes verlo aca <a
+          href="https://copymax.vercel.app/"
+          class="text-blue-500 hover:underline"
+        >
+          Pagina web de Copymax
+        </a>
+        <div class="mb-6">
+          <img
+            src="/copymaxweb.png"
+            alt="Clientes satisfechos"
+            class="w-full h-auto mx-auto mt-6"
+          />
+        </div>
+      </p>
+      <p class="text-lg leading-relaxed">
+        En conclusion, Copymax fue un proyecto que me ayudo a crecer como
+        profesionista, me gusta todo lo que he aprendido, todas las personas que
+        he conocido, pondria todos los disenos que he hecho en illustratoor,
+        ¡pero no acabaria! Gracias por leer :_)
+      </p>
+    </div>
+    <Footer />
+  </body>
+
+  <style is:global>
+    :root {
+      color-scheme: ligth dark;
+    }
+    html {
+      font-family:
+        "Onest Variable",
+        "Quicksand Variable" sans-serif;
+      height: 100%;
+    }
+    body {
+      background-color: #050505;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+</html>
